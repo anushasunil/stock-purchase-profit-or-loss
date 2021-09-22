@@ -2,12 +2,16 @@
 
 
 body {
-    text-align: left;
+   
     max-width: 40%;
     margin: auto;
     font-family: 'Bebas Neue', cursive;
+    margin-top: 5%;
+}
+
+.container {
     border: 0.7rem double black;
-    margin-top: 10%;
+    text-align: left;
 }
 
 h1 {
@@ -52,4 +56,52 @@ div {
     font-size: 1.7rem;
     margin-bottom: 1.5rem;
 
+}
+
+
+footer {
+    font-size: 1.5rem;
+    background-color: var(--primary-color);
+    /* padding: 2rem 1rem; */
+    text-align: center;
+    color: black;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    margin-top: 24%;
+
+}
+
+footer .link {
+    color: black;
+}
+
+footer ul {
+    padding-inline-start: 0px;
+
+}
+
+footer .footer-header {
+    font-weight: bold;
+}
+
+footer .link:hover {
+    color: black;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.link {
+    max-width: min-content;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+
+}
+
+.list-non-bullet {
+    list-style: none;
+}
+
+.list-item-inline {
+    display: inline;
 }
