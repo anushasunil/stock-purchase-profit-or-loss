@@ -14,7 +14,7 @@ function calculateProfitAndLoss(initial, quantity, current)
 {
     if(initial > current)
     {
-        var loss = (initial - current) * quantity;
+        var loss = (initial - current);
         var lossPercentage = (loss / initial) * 100;
         changeBackground("loss")
         
@@ -23,7 +23,7 @@ function calculateProfitAndLoss(initial, quantity, current)
     }
     else if (current > initial)
     {
-        var profit = (current - initial) * quantity;
+        var profit = (current - initial);
         var profitPercentage = (profit / initial) * 100;
         changeBackground("profit")
 
