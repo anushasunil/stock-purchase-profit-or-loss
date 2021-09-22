@@ -1,4 +1,3 @@
-
 var initialPrice = document.querySelector("#initial-price");
 var stockQuantity = document.querySelector("#stocks-quantity");
 var currentPrice = document.querySelector("#current-price");
@@ -10,85 +9,69 @@ var body = document.querySelector(".body");
 var heading = document.querySelector(".heading");
 
 
-function calculateProfitAndLoss(initial, quantity, current)
-{
-    if(initial > current)
-    {
+function calculateProfitAndLoss(initial, quantity, current) {
+    if (initial > current) {
         var loss = (initial - current);
         var lossPercentage = (loss / initial) * 100;
         changeBackground("loss")
-        
 
-        return "The loss is  ₹ "+ loss + " and " + lossPercentage + "% 😥";
-    }
-    else if (current > initial)
-    {
+
+        return "The loss is  ₹ " + loss + " and " + lossPercentage + "% 😥";
+    } else if (current > initial) {
         var profit = (current - initial);
         var profitPercentage = (profit / initial) * 100;
         changeBackground("profit")
 
-        return "The profit is  ₹ "+ profit + " and " + profitPercentage + "% 😃";
-    }
-    else
-    {
+        return "The profit is  ₹ " + profit + " and " + profitPercentage + "% 😃";
+    } else {
         changeBackground("")
         return "No gain No pain 🙂";
     }
 }
 
-btnSubmit.addEventListener("click", function clickHandler()
-{
+btnSubmit.addEventListener("click", function clickHandler() {
     let initial = Number(initialPrice.value);
     let quantity = Number(stockQuantity.value);
     let current = Number(currentPrice.value);
 
-    if(initial && quantity && current)
-    {
+    if (initial && quantity && current) {
         outputMessage.innerText = calculateProfitAndLoss(initial, quantity, current);
-        
-    }
-    else
-    {
+
+    } else {
         outputMessage.innerText = "Please fill all the fields properly";
     }
 
 })
 
-function changeBackground(status)
-{
-    if( status === "loss")
-    {
+function changeBackground(status) {
+    if (status === "loss") {
         body.style.backgroundColor = "#990000";
         heading.style.color = "white";
         body.style.borderColor = "white";
         outputMessage.style.color = "white";
 
-        label[0].style.color="white";
-        label[1].style.color="white";
-        label[2].style.color="white";
+        label[0].style.color = "white";
+        label[1].style.color = "white";
+        label[2].style.color = "white";
 
-    }
-    else if( status === "profit")
-    {
+    } else if (status === "profit") {
         body.style.backgroundColor = "#134d00";
         heading.style.color = "white";
         body.style.borderColor = "white";
         outputMessage.style.color = "white";
 
-        label[0].style.color="white";
-        label[1].style.color="white";
-        label[2].style.color="white";
-    }
-    else
-    {
+        label[0].style.color = "white";
+        label[1].style.color = "white";
+        label[2].style.color = "white";
+    } else {
         body.style.backgroundColor = "cornsilk";
         heading.style.color = "black";
         body.style.borderColor = "black";
         outputMessage.style.color = "black";
 
-        label[0].style.color="black";
-        label[1].style.color="black";
-        label[2].style.color="black";
+        label[0].style.color = "black";
+        label[1].style.color = "black";
+        label[2].style.color = "black";
 
     }
 }
