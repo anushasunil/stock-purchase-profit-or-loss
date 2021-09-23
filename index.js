@@ -7,19 +7,20 @@ var btnSubmit = document.querySelector("#btn-submit");
 var outputMessage = document.querySelector(".output-message");
 var body = document.querySelector(".body");
 var heading = document.querySelector(".heading");
+var container = document.querySelector(".container");
 
 
 function calculateProfitAndLoss(initial, quantity, current) {
     if (initial > current) {
-        var loss = (initial - current);
-        var lossPercentage = (loss / initial) * 100;
+        var loss = (initial - current)*quantity;
+        var lossPercentage = (loss / initial).toFixed(2);
         changeBackground("loss")
 
 
         return "The loss is  ₹ " + loss + " and " + lossPercentage + "% 😥";
     } else if (current > initial) {
-        var profit = (current - initial);
-        var profitPercentage = (profit / initial) * 100;
+        var profit = (current - initial)*quantity;
+        var profitPercentage = (profit / initial).toFixed(2);
         changeBackground("profit")
 
         return "The profit is  ₹ " + profit + " and " + profitPercentage + "% 😃";
@@ -46,32 +47,39 @@ btnSubmit.addEventListener("click", function clickHandler() {
 function changeBackground(status) {
     if (status === "loss") {
         body.style.backgroundColor = "#990000";
-        heading.style.color = "white";
-        body.style.borderColor = "white";
-        outputMessage.style.color = "white";
-
-        label[0].style.color = "white";
-        label[1].style.color = "white";
-        label[2].style.color = "white";
-
+        paintItWhite();
+        
     } else if (status === "profit") {
         body.style.backgroundColor = "#134d00";
-        heading.style.color = "white";
+        paintItWhite();
+
+    } else {
+        body.style.backgroundColor = "cornsilk";
+        paintItBlack();
+    }
+    container.style.borderColor = "white";
+}
+
+function paintItWhite()
+{
+    heading.style.color = "white";
         body.style.borderColor = "white";
         outputMessage.style.color = "white";
 
         label[0].style.color = "white";
         label[1].style.color = "white";
         label[2].style.color = "white";
-    } else {
-        body.style.backgroundColor = "cornsilk";
-        heading.style.color = "black";
+}
+
+
+function paintItBlack()
+{
+    heading.style.color = "black";
         body.style.borderColor = "black";
         outputMessage.style.color = "black";
 
         label[0].style.color = "black";
         label[1].style.color = "black";
         label[2].style.color = "black";
-
-    }
 }
+
