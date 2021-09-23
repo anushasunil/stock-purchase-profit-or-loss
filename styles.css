@@ -65,12 +65,10 @@ footer {
     left: 0;
     right:0;
     font-size: 1.5rem;
-    background-color: rgb(255,255,255,0.9);
+    background-color: rgb(255,255,255,0.3);
     text-align: center;
     color: black;
-    border-top-right-radius: 1rem;
-    border-top-left-radius: 1rem;
-
+    padding-top: 0.5rem;
 }
 
 footer .link {
@@ -82,14 +80,8 @@ footer ul {
 
 }
 
-footer .footer-header {
-    font-weight: bold;
-}
-
 footer .link:hover {
-    color: black;
-    transition: 0.5s;
-    font-weight: bold;
+    text-decoration: underline;
 }
 
 .link {
