@@ -65,8 +65,7 @@ footer {
     left: 0;
     right:0;
     font-size: 1.5rem;
-    background-color: var(--primary-color);
-    /* padding: 2rem 1rem; */
+    background-color: rgb(255,255,255,0.9);
     text-align: center;
     color: black;
     border-top-right-radius: 1rem;
