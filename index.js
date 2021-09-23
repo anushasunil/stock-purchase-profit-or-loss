@@ -8,6 +8,8 @@ var outputMessage = document.querySelector(".output-message");
 var body = document.querySelector(".body");
 var heading = document.querySelector(".heading");
 var container = document.querySelector(".container");
+var footer = document.querySelector("footer");
+var links = document.querySelectorAll(".link");
 
 
 function calculateProfitAndLoss(initial, quantity, current) {
@@ -64,6 +66,10 @@ function paintItWhite() {
     heading.style.color = "white";
     body.style.borderColor = "white";
     outputMessage.style.color = "white";
+    footer.style.color = "white";
+    links[0].style.color = "white";
+    links[1].style.color = "white";
+    links[2].style.color = "white";
 
     label[0].style.color = "white";
     label[1].style.color = "white";
