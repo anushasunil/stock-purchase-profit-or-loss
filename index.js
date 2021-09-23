@@ -12,14 +12,14 @@ var container = document.querySelector(".container");
 
 function calculateProfitAndLoss(initial, quantity, current) {
     if (initial > current) {
-        var loss = (initial - current)*quantity;
+        var loss = (initial - current) * quantity;
         var lossPercentage = (loss / initial).toFixed(2);
         changeBackground("loss")
 
 
         return "The loss is  ₹ " + loss + " and " + lossPercentage + "% 😥";
     } else if (current > initial) {
-        var profit = (current - initial)*quantity;
+        var profit = (current - initial) * quantity;
         var profitPercentage = (profit / initial).toFixed(2);
         changeBackground("profit")
 
@@ -48,7 +48,7 @@ function changeBackground(status) {
     if (status === "loss") {
         body.style.backgroundColor = "#990000";
         paintItWhite();
-        
+
     } else if (status === "profit") {
         body.style.backgroundColor = "#134d00";
         paintItWhite();
@@ -60,26 +60,23 @@ function changeBackground(status) {
     container.style.borderColor = "white";
 }
 
-function paintItWhite()
-{
+function paintItWhite() {
     heading.style.color = "white";
-        body.style.borderColor = "white";
-        outputMessage.style.color = "white";
+    body.style.borderColor = "white";
+    outputMessage.style.color = "white";
 
-        label[0].style.color = "white";
-        label[1].style.color = "white";
-        label[2].style.color = "white";
+    label[0].style.color = "white";
+    label[1].style.color = "white";
+    label[2].style.color = "white";
 }
 
 
-function paintItBlack()
-{
+function paintItBlack() {
     heading.style.color = "black";
-        body.style.borderColor = "black";
-        outputMessage.style.color = "black";
+    body.style.borderColor = "black";
+    outputMessage.style.color = "black";
 
-        label[0].style.color = "black";
-        label[1].style.color = "black";
-        label[2].style.color = "black";
+    label[0].style.color = "black";
+    label[1].style.color = "black";
+    label[2].style.color = "black";
 }
-
