@@ -59,13 +59,14 @@ function changeBackground(status) {
         body.style.backgroundColor = "cornsilk";
         paintItBlack();
     }
-    container.style.borderColor = "white";
+    
 }
 
 function paintItWhite() {
     heading.style.color = "white";
     body.style.borderColor = "white";
     outputMessage.style.color = "white";
+    container.style.borderColor = "white";
     footer.style.color = "white";
     links[0].style.color = "white";
     links[1].style.color = "white";
